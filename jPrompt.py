@@ -1,6 +1,6 @@
 import time
 import random
-
+import os
 #commands:
 #qq -> immediate quit. Append all previous answers to Journal file
 #Ask all questions
@@ -58,5 +58,6 @@ if __name__ == "__main__":
     #Get filename 
     #TODO: arguments to get file name
     jName = 'main.txt'
-    runPrompts(jName)
+    fullName =  os.path.dirname(os.path.abspath(__file__)) + '/' + jName
+    runPrompts(fullName)
     
